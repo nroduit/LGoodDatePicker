@@ -42,11 +42,7 @@ import com.github.lgooddatepicker.optionalusertools.DateHighlightPolicy;
 import com.github.lgooddatepicker.optionalusertools.DateInterval;
 import com.github.lgooddatepicker.optionalusertools.PickerUtilities;
 import com.github.lgooddatepicker.zinternaltools.DateVetoPolicyMinimumMaximumDate;
-import com.github.lgooddatepicker.zinternaltools.InternalConstants;
 import java.awt.Point;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.MatteBorder;
 
 import java.time.Clock;
 import java.time.DayOfWeek;
@@ -2247,12 +2243,6 @@ public class DatePickerSettings {
         }
         // Set the editability of the date picker text field.
         parentDatePicker.getComponentDateTextField().setEditable(allowKeyboardEditing);
-        // Set the text field border color based on whether the text field is editable.
-        Color textFieldBorderColor = (allowKeyboardEditing)
-            ? InternalConstants.colorEditableTextFieldBorder
-            : InternalConstants.colorNotEditableTextFieldBorder;
-        parentDatePicker.getComponentDateTextField().setBorder(new CompoundBorder(
-            new MatteBorder(1, 1, 1, 1, textFieldBorderColor), new EmptyBorder(1, 3, 2, 2)));
     }
 
     /**
@@ -2336,7 +2326,7 @@ public class DatePickerSettings {
      */
     private ArrayList<CalendarBorderProperties> zGetDefaultBorderPropertiesList() {
         ArrayList<CalendarBorderProperties> results = new ArrayList<>();
-        Color defaultDateBoxBorderColor = new Color(99, 130, 191);
+        Color defaultDateBoxBorderColor = colors.get(DateArea.TextMonthAndYearNavigationButtons);
         Color defaultWeekdayEndcapsBorderColor = colorBackgroundWeekdayLabels;
         Color defaultWeekNumberEndcapsBorderColor = colorBackgroundWeekNumberLabels;
         // Set the borders properties for the date box.

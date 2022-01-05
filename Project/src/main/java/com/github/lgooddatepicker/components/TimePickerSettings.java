@@ -28,7 +28,6 @@ import com.privatejgoodies.forms.layout.FormLayout;
 import com.github.lgooddatepicker.optionalusertools.PickerUtilities;
 import com.github.lgooddatepicker.optionalusertools.TimeVetoPolicy;
 import com.github.lgooddatepicker.zinternaltools.ExtraTimeStrings;
-import com.github.lgooddatepicker.zinternaltools.InternalConstants;
 import com.github.lgooddatepicker.zinternaltools.InternalUtilities;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -46,9 +45,7 @@ import java.util.Map;
 import java.util.TreeSet;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
-import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.MatteBorder;
 
 /**
  * TimePickerSettings, This holds all the settings that can be customized in a time picker. Most of
@@ -937,12 +934,6 @@ public class TimePickerSettings {
     private void zApplyAllowKeyboardEditing() {
         // Set the editability of the time picker text field.
         parent.getComponentTimeTextField().setEditable(allowKeyboardEditing);
-        // Set the text field border color based on whether the text field is editable.
-        Color textFieldBorderColor = (allowKeyboardEditing)
-                ? InternalConstants.colorEditableTextFieldBorder
-                : InternalConstants.colorNotEditableTextFieldBorder;
-        parent.getComponentTimeTextField().setBorder(new CompoundBorder(
-                new MatteBorder(1, 1, 1, 1, textFieldBorderColor), new EmptyBorder(1, 3, 2, 2)));
     }
 
     /**

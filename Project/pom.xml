@@ -19,7 +19,7 @@ plugins in this file operate inside the "package" and "install" phases.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.lgooddatepicker</groupId>
     <artifactId>LGoodDatePicker</artifactId>
-    <version>11.3.0</version>
+    <version>11.3.0-r1</version>
     <packaging>jar</packaging>
     <name>LGoodDatePicker</name>
     <description>Java Swing Date Picker. Easy to use, good looking, nice features, and
@@ -221,24 +221,6 @@ plugins in this file operate inside the "package" and "install" phases.
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.3.1</version>
-                <configuration>
-                    <source>8</source>
-                    <!-- Turn off errors resulting from the new (strict) Java 8 Javadoc standards. -->
-                    <doclint>none</doclint>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

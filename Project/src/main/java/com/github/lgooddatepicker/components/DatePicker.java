@@ -504,9 +504,9 @@ public class DatePicker extends JPanel implements CustomPopupCloseListener {
         }
         // If this function was called programmatically, we may need to change the focus to this
         // popup.
-        if (!dateTextField.hasFocus()) {
-            dateTextField.requestFocusInWindow();
-        }
+        //        if (!dateTextField.hasFocus()) {
+        //            dateTextField.requestFocusInWindow();
+        //        }
         // Get the last valid date, to pass to the calendar if needed.
         LocalDate selectedDateForCalendar = lastValidDate;
         // Create a new calendar panel. 
@@ -524,7 +524,7 @@ public class DatePicker extends JPanel implements CustomPopupCloseListener {
             calendarPanel.setSelectedDate(selectedDateForCalendar);
         }
         // Create a new custom popup.
-        popup = new CustomPopup(calendarPanel, SwingUtilities.getWindowAncestor(this),
+        popup = new CustomPopup(calendarPanel, SwingUtilities.getWindowAncestor(dateTextField),
                 this, settings.getBorderCalendarPopup());
         // Calculate the default origin for the popup.
         int defaultX = toggleCalendarButton.getLocationOnScreen().x
@@ -951,10 +951,6 @@ public class DatePicker extends JPanel implements CustomPopupCloseListener {
                 "fill:pref:grow"));
 
         //---- dateTextField ----
-        dateTextField.setMargin(new Insets(1, 3, 2, 2));
-        dateTextField.setBorder(new CompoundBorder(
-                new MatteBorder(1, 1, 1, 1, new Color(122, 138, 153)),
-                new EmptyBorder(1, 3, 2, 2)));
         dateTextField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {

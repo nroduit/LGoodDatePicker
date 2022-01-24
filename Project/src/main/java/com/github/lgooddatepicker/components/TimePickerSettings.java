@@ -923,11 +923,10 @@ public class TimePickerSettings {
   }
 
   /** zApplyAllowKeyboardEditing, This applies the named setting to the parent component. */
-
-    private void zApplyAllowKeyboardEditing() {
-        // Set the editability of the time picker text field.
-        parent.getComponentTimeTextField().setEditable(allowKeyboardEditing);
-    }
+  private void zApplyAllowKeyboardEditing() {
+    // Set the editability of the time picker text field.
+    parent.getComponentTimeTextField().setEditable(allowKeyboardEditing);
+  }
 
   /** zApplyDisplaySpinnerButtons, This applies the specified setting to the time picker. */
   void zApplyDisplaySpinnerButtons() {

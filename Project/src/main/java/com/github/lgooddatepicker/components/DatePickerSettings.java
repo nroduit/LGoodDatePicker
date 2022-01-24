@@ -2177,14 +2177,13 @@ public class DatePickerSettings {
   }
 
   /** zApplyAllowKeyboardEditing, This applies the named setting to the parent component. */
-
-    void zApplyAllowKeyboardEditing() {
-        if (parentDatePicker == null) {
-            return;
-        }
-        // Set the editability of the date picker text field.
-        parentDatePicker.getComponentDateTextField().setEditable(allowKeyboardEditing);
+  void zApplyAllowKeyboardEditing() {
+    if (parentDatePicker == null) {
+      return;
     }
+    // Set the editability of the date picker text field.
+    parentDatePicker.getComponentDateTextField().setEditable(allowKeyboardEditing);
+  }
 
   /** zApplyGapBeforeButtonPixels, This applies the named setting to the parent component. */
   void zApplyGapBeforeButtonPixels() {

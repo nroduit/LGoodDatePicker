@@ -11,7 +11,7 @@ General Discussion: [Discussion Thread](https://github.com/LGoodDatePicker/LGood
 
 ## News:
 
-* [LGoodDatePicker 11.2.0](https://github.com/LGoodDatePicker/LGoodDatePicker/releases) was released on February 28, 2021. This version adds the Icelandic language translation and the possibility to customize the colors of date and time pickers in disabled state. This is the last version that supported Java 6 and 7.
+* [LGoodDatePicker 11.2.0](https://github.com/LGoodDatePicker/LGoodDatePicker/releases) was released on February 28, 2021. This version adds the Icelandic language translation and the possibility to customize the colors of date and time pickers in disabled state. This is the last version that will still support the older Java versions, Java 6 or 7. Future releases will require Java 8 or higher.
 
 * [LGoodDatePicker 11.1.0](https://github.com/LGoodDatePicker/LGoodDatePicker/releases) was released on September 30, 2020. This version adds the possibility to customize the colors used for the mouse hover highlight of the calendar panel labels.
 
@@ -41,8 +41,7 @@ General Discussion: [Discussion Thread](https://github.com/LGoodDatePicker/LGood
 (Month names, weekday names, the default first day of the week, default date and time formats, and button text.)
 * Translations include 26 languages.
 (Arabic, Bulgarian, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hindi, Icelandic, Italian, Indonesian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Vietnamese.)
-* Natively uses the standard Java 8 time package (java.time.LocalDate). This package is also called "JSR-310".<br/>
-(Can also run in Java 6 or 7, using the [Parallel Backports](https://github.com/LGoodDatePicker/LGoodDatePicker/releases/tag/Backports).) 
+* Natively uses the standard Java 8 time package (java.time.LocalDate). This package is also called "JSR-310".<br/> 
 * Supports other legacy and common data types, such as "java.util.Date".
 * Compatible with Java IDE visual form designers, including NetBeans, Eclipse, IntelliJ, and the JFormDesigner program.
 * The pickers can optionally be added to the cells or columns of a JTable, using the supplied TableEditor classes.

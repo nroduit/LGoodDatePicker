@@ -502,14 +502,14 @@ public class DatePicker extends JPanel implements CustomPopupCloseListener {
     // If this function was called programmatically, we may need to change the focus to this
     // popup.
     //        if (!dateTextField.hasFocus()) {
-        //            dateTextField.requestFocusInWindow();
-        //        }
-        // Get the last valid date, to pass to the calendar if needed.
-        LocalDate selectedDateForCalendar = lastValidDate;
-        // Create a new calendar panel. 
-        // Use the CalendarPanel constructor that is made for the DatePicker class.
-        DatePicker thisDatePicker = this;
-        calendarPanel = new CalendarPanel(thisDatePicker);
+    //            dateTextField.requestFocusInWindow();
+    //        }
+    // Get the last valid date, to pass to the calendar if needed.
+    LocalDate selectedDateForCalendar = lastValidDate;
+    // Create a new calendar panel.
+    // Use the CalendarPanel constructor that is made for the DatePicker class.
+    DatePicker thisDatePicker = this;
+    calendarPanel = new CalendarPanel(thisDatePicker);
 
     fireComponentEvent(
         new ComponentEvent(ComponentEvent.PREVIOUS_YEAR, calendarPanel.getPreviousYearButton()));
@@ -969,12 +969,14 @@ public class DatePicker extends JPanel implements CustomPopupCloseListener {
     // ======== this ========
     setLayout(new FormLayout("pref:grow, [3px,pref], [26px,pref]", "fill:pref:grow"));
 
-        //---- dateTextField ----
-        dateTextField.addFocusListener(new FocusAdapter() {
-            @Override
-            public void focusLost(FocusEvent e) {
-                setTextFieldToValidStateIfNeeded();
-            }
+    // ---- dateTextField ----
+    // dateTextField.setMargin(new Insets(1, 3, 2, 2));
+    dateTextField.addFocusListener(
+        new FocusAdapter() {
+          @Override
+          public void focusLost(FocusEvent e) {
+            setTextFieldToValidStateIfNeeded();
+          }
         });
     add(dateTextField, CC.xy(1, 1));
 

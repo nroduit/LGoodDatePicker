@@ -28,8 +28,16 @@ import com.github.lgooddatepicker.optionalusertools.DateInterval;
 import com.github.lgooddatepicker.optionalusertools.DateVetoPolicy;
 import com.github.lgooddatepicker.optionalusertools.PickerUtilities;
 import com.github.lgooddatepicker.zinternaltools.DateVetoPolicyMinimumMaximumDate;
+import com.github.lgooddatepicker.zinternaltools.ExtraDateStrings;
+import com.github.lgooddatepicker.zinternaltools.InternalUtilities;
+import com.github.lgooddatepicker.zinternaltools.TranslationSource;
+import com.privatejgoodies.forms.layout.ColumnSpec;
+import com.privatejgoodies.forms.layout.ConstantSize;
+import com.privatejgoodies.forms.layout.FormLayout;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Point;
-
+import java.awt.font.TextAttribute;
 import java.time.Clock;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -47,9 +55,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.MatteBorder;
 
 /**
  * DatePickerSettings, This holds all the settings that can be customized for a DatePicker (or an
